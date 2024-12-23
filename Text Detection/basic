@@ -1,0 +1,8 @@
+import cv2
+import pytesseract
+
+im = cv2.imread('question1.jpg')
+config = ('-l eng --oem 1 --psm 3')
+text = pytesseract.image_to_string(im, config=config)
+text = text.split('n')
+print(text)
