@@ -1,0 +1,6 @@
+import pytesseract
+from PIL import ImageGrab
+
+image = ImageGrab.grab()
+text = pytesseract.image_to_string(image)
+print(text)
